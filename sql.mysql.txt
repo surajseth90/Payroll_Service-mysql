@@ -23,3 +23,11 @@ USE payroll_service;
 
 #UC4
  SELECT * FROM employee_payroll;
+
+#UC5
+ SELECT salary FROM employee_payroll
+    -> WHERE name = 'Mark';
+
+  SELECT * FROM employee_payroll
+    ->WHERE start BETWEEN CAST('2019-05-20' AS DATE) AND DATE (NOW());;
+ 
