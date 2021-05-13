@@ -42,3 +42,4 @@ S
  SELECT MAX(salary) FROM employee_payroll;
  SELECT MIN(salary) FROM employee_payroll;
  SELECT * FROM employee_payroll WHERE gender ='M';
+ SELECT gender , count(name) FROM employee_payroll;
