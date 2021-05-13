@@ -20,7 +20,7 @@ USE payroll_service;
     -> ('Mark' ,500000 , '2019-05-20');
 
  DESC employee_payroll;
-
+S
 #UC4
  SELECT * FROM employee_payroll;
 
@@ -31,3 +31,7 @@ USE payroll_service;
   SELECT * FROM employee_payroll
     ->WHERE start BETWEEN CAST('2019-05-20' AS DATE) AND DATE (NOW());;
  
+#UC6
+ ALTER TABLE employee_payroll
+    -> ADD Gender CHAR(1) NOT NULL AFTER name;
+ UPDATE employee_payroll SET gender ='M' WHERE name = 'Suraj' or name ='Bill' or name='Mark';
