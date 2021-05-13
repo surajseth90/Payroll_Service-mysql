@@ -20,3 +20,6 @@ USE payroll_service;
     -> ('Mark' ,500000 , '2019-05-20');
 
  DESC employee_payroll;
+
+#UC4
+ SELECT * FROM employee_payroll;
