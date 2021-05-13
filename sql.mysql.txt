@@ -35,3 +35,10 @@ S
  ALTER TABLE employee_payroll
     -> ADD Gender CHAR(1) NOT NULL AFTER name;
  UPDATE employee_payroll SET gender ='M' WHERE name = 'Suraj' or name ='Bill' or name='Mark';
+
+#UC7
+ SELECT SUM(salary) FROM employee_payroll;
+ SELECT AVG(salary) FROM employee_payroll;
+ SELECT MAX(salary) FROM employee_payroll;
+ SELECT MIN(salary) FROM employee_payroll;
+ SELECT * FROM employee_payroll WHERE gender ='M';
