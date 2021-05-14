@@ -53,4 +53,19 @@ S
     -> ADD department VARCHAR(100) NOT NULL AFTER address;
  ALTER TABLE employee_payroll
     -> ALTER address SET DEFAULT 'TBD';
+
+#UC9
+ ALTER TABLE employee_payroll
+    -> RENAME COLUMN salary TO basic_pay;
+ ALTER TABLE employee_payroll
+    -> ADD deduction DOUBLE NOT NULL AFTER basic_pay ;
+ ALTER TABLE employee_payroll
+    -> ADD taxable_pay DOUBLE NOT NULL AFTER deduction ;
+ ALTER TABLE employee_payroll
+    -> ADD tax DOUBLE NOT NULL AFTER taxable_pay ;
+ ALTER TABLE employee_payroll
+    -> ADD net_pay DOUBLE NOT NULL AFTER tax;
+
+
+ 
  
